@@ -49,7 +49,7 @@ def clientthread(conn, nickname):
             if message:
                 if message.split(": ")[-1].lower() == answer:
                     score += 1
-                    conn.send(f"Bravo! Your score is {score}\n\n".encode('utf-8'))
+                    conn.send(f"Good Job! Your score is {score}\n\n".encode('utf-8'))
                 else:
                     conn.send("Incorrect answer! Better luck next time!\n\n".encode('utf-8'))
                 remove_question(index)
